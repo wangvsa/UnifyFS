@@ -2059,6 +2059,9 @@ ssize_t UNIFYFS_WRAP(pread)(int fd, void* buf, size_t count, off_t offset)
             return (ssize_t)(-1);
         }
 
+        LOGDBG("pread - fd=%d offset=%zu count=%zu",
+               fd, (size_t)offset, count);
+
         /* TODO: handle error if sync fails? */
         /* sync data for file before reading, if needed */
         unifyfs_fid_sync_extents(posix_client, fid);
