@@ -6,7 +6,7 @@ applications. However, there is a lack of software support for node-local storag
 be used efficiently by applications that use shared files.
 
 UnifyFS is an ephemeral, user-level file system under active development.
-UnifyFS addresses a major usability factor of current and future systems because it enables 
+UnifyFS addresses a major usability factor of current and future systems because it enables
 applications to gain performance advantages from distributed storage devices on the system while being as easy to use as a center-wide parallel file system.
 
 ## Documentation
