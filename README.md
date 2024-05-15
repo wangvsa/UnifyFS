@@ -1,20 +1,13 @@
-# UnifyFS: A Distributed Burst Buffer File System
+# UnifyFS: A User-Level File System for Supercomputers
 
-Node-local burst buffers are becoming an indispensable hardware resource on
+Node-local storage is becoming an indispensable hardware resource on
 large-scale supercomputers to buffer the bursty I/O from scientific
-applications. However, there is a lack of software support for burst buffers to
-be efficiently shared by applications within a batch-submitted job and recycled
-across different batch jobs. In addition, burst buffers need to cope with a
-variety of challenging I/O patterns from data-intensive scientific
-applications.
+applications. However, there is a lack of software support for node-local storage to
+be used efficiently by applications that use shared files. 
 
-UnifyFS is a user-level burst buffer file system under active development.
-UnifyFS supports scalable and efficient aggregation of I/O bandwidth from burst
-buffers while having the same life cycle as a batch-submitted job. While UnifyFS
-is designed for N-N write/read, UnifyFS compliments its functionality with the
-support for N-1 write/read. It efficiently accelerates scientific I/O based on
-scalable metadata indexing, co-located I/O delegation, and server-side read
-clustering and pipelining.
+UnifyFS is an ephemeral, user-level file system under active development.
+UnifyFS addresses a major usability factor of current and future systems because it enables 
+applications to gain performance advantages from distributed storage devices on the system while being as easy to use as a center-wide parallel file system.
 
 ## Documentation
 UnifyFS documentation is at [https://unifyfs.readthedocs.io](https://unifyfs.readthedocs.io).
