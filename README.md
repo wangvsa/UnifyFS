@@ -3,7 +3,7 @@
 Node-local storage is becoming an indispensable hardware resource on
 large-scale supercomputers to buffer the bursty I/O from scientific
 applications. However, there is a lack of software support for node-local storage to
-be used efficiently by applications that use shared files. 
+be used efficiently by applications that use shared files.
 
 UnifyFS is an ephemeral, user-level file system under active development.
 UnifyFS addresses a major usability factor of current and future systems because it enables 
