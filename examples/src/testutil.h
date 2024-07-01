@@ -1260,11 +1260,16 @@ int test_remove_file(test_cfg* cfg, const char* filepath)
 
     /* stat file and simply return if it already doesn't exist */
     rc = stat(filepath, &sb);
+    // We want every rank get the result from stat()
+    // above. The barrier makes sure rank 0 won't just
+    // go ahead delete the file before others call stat()
+    test_barrier(cfg);
     if (rc) {
         test_print_verbose_once(cfg,
             "DEBUG: stat(%s): file already doesn't exist", filepath);
         return 0;
     }
+
 
     if (cfg->use_mpiio) {
         if (cfg->rank == 0 || cfg->io_pattern == IO_PATTERN_NN) {
